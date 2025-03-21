@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #fff8dc;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #d4a017;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .flower {
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .flower:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>🌼 Flores Amarillas 🌼</h1>
+    <div class="container" id="flowerContainer"></div>
+
+    <script>
+        // Lista de URLs de imágenes de flores amarillas
+        const flowerImages = [
+            "https://source.unsplash.com/400x300/?yellow-flower",
+            "https://source.unsplash.com/400x300/?sunflower",
+            "https://source.unsplash.com/400x300/?yellow-rose",
+            "https://source.unsplash.com/400x300/?daisy"
+        ];
+
+        // Cargar imágenes en la página
+        const container = document.getElementById("flowerContainer");
+        flowerImages.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.classList.add("flower");
+            img.width = 200;
+            img.height = 150;
+            container.appendChild(img);
+        });
+    </script>
+</body>
+</html>
